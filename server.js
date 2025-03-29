@@ -8,7 +8,7 @@ const validate = (n1, n2) => {
         return false;
     } else return true;
 }
-const addTwoNumber = (n1, n2) => {
+const add = (n1, n2) => {
     return n1 + n2;
 };
 
@@ -37,7 +37,7 @@ app.get("/add", (req, res) => {
         return res.status(400).json({ statuscode: 400, message: "Invalid input. Please enter valid numbers." });
     }
 
-    const result = addTwoNumber(n1, n2);
+    const result = add(n1, n2);
     res.json({ statuscode: 200, data: result });
 });
 
